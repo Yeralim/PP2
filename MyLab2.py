@@ -329,3 +329,18 @@ fruits = ["apple", "banana", "cherry"]
 for x in adj:
   for y in fruits:
     print(x, y)
+    
+
+
+
+def double_numbers(numbers):
+    """Функция принимает список чисел и возвращает новый список с удвоенными значениями"""
+    return list(map(lambda x: x * 2, numbers))
+
+# Исходный список
+numbers = [1, 2, 3, 4]
+
+# Вызываем функцию
+doubled = double_numbers(numbers)
+
+print(doubled)  # Вывод: [2, 4, 6, 8]

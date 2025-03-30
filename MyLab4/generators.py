@@ -7,6 +7,20 @@ N=int(input("N:"))
 squares=square(N) #generation
 print(list(squares))     
 
+"""
+def square_num(N):
+    num = 1
+    while num <= N:
+        yield num ** 2  # Yield the square of the number
+        num += 1
+
+# Using the generator
+gen = square_num(5)
+
+for square in gen:
+    print(square)
+"""
+
 #2
    
 def gen(n):

@@ -391,6 +391,12 @@ randomator(1,10,10)
 
 
 
+class person:
+    def __init__(self):
+        self.txt = ""
+    def say(self,txt):
+        return  f"people said : {self.txt}"
+
 
 
 
@@ -560,3 +566,37 @@ def imdvpoint(movies):
             cnt+=1
     return avg/cnt
 print(imdvpoint(movies))
+
+
+
+import json
+
+def reverse_ex(data):
+    reversed_dict = {}  
+    for key in reversed(data): 
+        reversed_dict[key] = data[key]  
+    return reversed_dict  
+
+data = { 
+    "Name": "Alice",
+    "age": 25,
+    "city": "NY"
+}
+
+json_str = json.dumps(data, indent=4, ensure_ascii=False)
+print(json_str)
+
+#2
+parsed_data = json.loads(json_str)
+
+#3
+reversed_data = reverse_ex(parsed_data)
+
+#4
+print(reversed_data)
+
+
+
+
+if "age" in parsed_data:  
+    parsed_data["age"] = 32
