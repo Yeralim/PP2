@@ -2,7 +2,7 @@ import psycopg2 as psg
 import csv
 
 
-conn = psg.connect(host="localhost", dbname="phonebook", user="postgres", password="Yeralim008!!!", port=5432)
+conn = psg.connect(host="localhost", dbname="phonebook", user="postgres", password="...", port=5432)
 
 cur = conn.cursor()
 

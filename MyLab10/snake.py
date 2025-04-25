@@ -2,7 +2,7 @@ import pygame as pg
 import random
 import psycopg2 as psg
 
-conn = psg.connect(host="localhost", dbname="snake", user="postgres", password="Yeralim008!!!", port=5432)
+conn = psg.connect(host="localhost", dbname="snake", user="postgres", password="...", port=5432)
 
 cur = conn.cursor()
 
