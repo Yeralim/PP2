@@ -157,3 +157,48 @@ print(txt)
 #10.5
 #PYTHON - ESCAPE CHARACTERS
 txt = "We are the so-called \"Vikings\" from the north."
+
+
+
+
+
+
+
+
+
+import pygame
+
+pygame.init()
+
+# Окно
+WIDTH, HEIGHT = 400, 300
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Смена картинки")
+
+# Загрузка картинок
+image1 = pygame.image.load("image1.png")  # Первая картинка
+image2 = pygame.image.load("image2.png")  # Вторая картинка
+current_image = image1  # Начинаем с первой картинки
+
+# Позиция картинки
+rect = current_image.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+
+running = True
+while running:
+    screen.fill("white")  # Очистка экрана
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+        # Проверяем нажатие пробела
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                # Меняем картинку
+                current_image = image2 if current_image == image1 else image1
+
+    # Отрисовка текущей картинки
+    screen.blit(current_image, rect)
+    pygame.display.flip()
+
+pygame.quit()

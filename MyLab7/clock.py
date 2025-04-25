@@ -32,7 +32,7 @@ while not done:
     minute = now.minute
     second = now.second
     
-    angle_minute = ((minute * 0) + 60) - minute * 6   #Вычисляем углы поворота
+    angle_minute =((minute * 0) + 60) - minute * 6   #Вычисляем углы поворота
     angle_second = -(second * 6)  
     
     screen.blit(mainclock, (0, 0))#Отображаем фон
@@ -49,3 +49,4 @@ while not done:
     clock.tick(60)#FPS
     
 pygame.quit()
+ 

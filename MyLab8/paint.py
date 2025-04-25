@@ -90,7 +90,7 @@ while not done:  #main cicle
         pygame.draw.line(drawing_surface, colorBLACK, (prevX, prevY), (currX, currY), THICKNESS)
         prevX, prevY = currX, currY
     
-    elif event.type == pygame.MOUSEBUTTONUP:#sob itye kogda mishka otpuschena
+    elif event.type == pygame.MOUSEBUTTONUP:#sobitye kogda mishka otpuschena
       if event.button == 1:
         LMBpressed = False
         if mode == "rect":

@@ -11,14 +11,14 @@ FPS = 60
 WIDTH, HEIGHT = 400, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
-background = pygame.image.load(r"C:\Users\Acer\Desktop\Python\AnimatedStreet.png")
-player_img = pygame.image.load(r"C:\Users\Acer\Desktop\Python\Player.png")
-enemy_img = pygame.image.load(r"C:\Users\Acer\Desktop\Python\Enemy.png")
-coin_img = pygame.image.load(r"C:\Users\Acer\Desktop\Python\coin.png")
+background = pygame.image.load(r"C:\Users\Admin\OneDrive\Рабочий стол\PP labs\AnimatedStreet.png")
+player_img = pygame.image.load(r"C:\Users\Admin\OneDrive\Рабочий стол\PP labs\Player.png")
+enemy_img = pygame.image.load(r"C:\Users\Admin\OneDrive\Рабочий стол\PP labs\Enemy.png")
+coin_img = pygame.image.load(r"C:\Users\Admin\OneDrive\Рабочий стол\PP labs\coin.png")
 
 #music
-pygame.mixer.music.load(r"C:\Users\Acer\Desktop\Python\background.wav")
-crash_sound = pygame.mixer.Sound(r"C:\Users\Acer\Desktop\Python\crash.wav")
+pygame.mixer.music.load(r"C:\Users\Admin\OneDrive\Рабочий стол\PP labs\background.wav")
+crash_sound = pygame.mixer.Sound(r"C:\Users\Admin\OneDrive\Рабочий стол\PP labs\crash.wav")
 pygame.mixer.music.play(-1)
 
 #shrifts
@@ -84,7 +84,6 @@ class Coin(pygame.sprite.Sprite):
         self.rect.x = random.randint(0, WIDTH - self.rect.w)
         self.rect.y = -self.rect.h
 
-#creating the oblects
 player = Player()
 enemies = [Enemy() for _ in range(1)]  #initial enemy
 coin = Coin()

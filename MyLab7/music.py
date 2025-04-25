@@ -8,7 +8,7 @@ pygame.init()
 
 # Загружаем музыку из папки
 playlist = []
-music_folder = r"C:\Users\Acer\Desktop\Python\playlist"
+music_folder = r"C:\Users\Admin\OneDrive\Рабочий стол\PP labs\playlist"
 
 if os.path.exists(music_folder):  # Проверяем, существует ли папка
     allmusic = os.listdir(music_folder)

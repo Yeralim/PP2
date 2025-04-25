@@ -141,3 +141,19 @@ while running:
     clock.tick(FPS)
 
 pygame.quit()
+
+
+
+
+
+
+
+
+
+
+
+cur.execute("SELECT user_name FROM phonebook WHERE user_name LIKE 'A%'")
+rows = cur.fetchall()
+
+for row in rows:
+    print(row)

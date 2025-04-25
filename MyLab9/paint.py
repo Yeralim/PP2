@@ -1,5 +1,7 @@
 import pygame
-
+import random
+from random import choices
+from random import randint
 pygame.init()
 
 WIDTH, HEIGHT = 800, 600
@@ -12,6 +14,10 @@ colorBLACK = (0, 0, 0)
 colorRED = (255, 0, 0)
 colorGREEN = (0, 255, 0)
 colorBLUE = (0, 0, 255)
+r_color=(randint(0 , 255), randint(0, 255), randint(0, 255))
+
+def random_color() :
+      return (randint(0 , 255), randint(0, 255), randint(0, 255))
 
 #initial parametrs
 screen.fill(colorBLACK)
@@ -67,10 +73,13 @@ while not done:
         equilateral_triangles.clear()
         rhombuses.clear()
         drawing_surface = screen.copy()
+        
       elif event.key == pygame.K_r:
-        curr_color = colorRED
+            random_color()
+            curr_color = random_color()
+
       elif event.key == pygame.K_g:
-        curr_color = colorGREEN
+            curr_color = colorGREEN
       elif event.key == pygame.K_b:
         curr_color = colorBLUE
     
